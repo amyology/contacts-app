@@ -1,0 +1,39 @@
+<div>
+<h1>Add A Contact</h1>
+
+<%= form_tag '/list', method: :post do %>
+  <div>
+    <%= label_tag :first_name %>
+    <%= text_field_tag :first_name %>
+  </div>
+
+  <div>
+    <%= label_tag :middle %>
+    <%= text_field_tag :middle %>
+  </div>
+
+  <div>
+    <%= label_tag :last_name %>
+    <%= text_field_tag :last_name %>
+  </div>
+
+  <div>
+    <%= label_tag :phone %>
+    <%= text_field_tag :phone %>
+  </div>
+
+  <div>
+    <%= label_tag :email %>
+    <%= text_field_tag :email %>
+  </div>
+
+  <div>
+    <%= label_tag :biography %>
+    <%= text_field_tag :biography %>
+  </div>
+
+  <div>
+    <%= submit_tag 'Submit' %>
+  </div>
+<% end %>
+</div>

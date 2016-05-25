@@ -1,0 +1,17 @@
+<% if signed_in? == false %>
+    <%= link_to 'Sign In', '/users/sign_in' %> or <%= link_to 'Sign Up', '/users/sign_up' %>
+<% elsif signed_in? %>
+  <% @contacts.each do |contact| %> 
+    <% if contact.user_id == current_user.id %>    
+      <div class="box">
+        <b><u><a href="/list/<%= contact.id %>">Contact</a></u></b> <br>
+        First Name: <%= contact.first_name %> <br>
+        Middle Name: <%= contact.middle %> <br>
+        Last Name: <%= contact.last_name %> <br>
+        Email: <%= contact.email %> <br>
+        Phone: <%= contact.phone %> <br>
+        Bio: <%= contact.biography %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>

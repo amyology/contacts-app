@@ -1,0 +1,13 @@
+<br>
+<b><u>Contact</u></b> <br>
+First name: <%= @contact.first_name %><br>
+Middle name: <%= @contact.middle %><br>
+Last name: <%= @contact.last_name %><br>
+Email: <%= @contact.email %> <br>
+Phone: <%= @contact.phone %> <br>
+Bio: <%= @contact.biography %> <br>
+User id: <%= @contact.user_id %><br>
+Updated at: <%= @contact.friendly_time %><br><br>
+
+<%= link_to "Edit Contact", "/list/#{@contact.id}/edit" %> <br>
+<%= link_to "Delete Contact", "/list/#{@contact.id}", method: :delete %>
