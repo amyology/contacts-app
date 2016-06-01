@@ -1,4 +1,10 @@
-<%= form_tag "/list/#{@contact.id}", method: :patch do %>
+<h1>Edit Contact</h1>
+<br>
+<% @contact.errors.full_messages.each do |error| %>
+  <%= error %> <br>
+<% end %>
+
+<%= form_tag "/contacts/#{@contact.id}", method: :patch do %>
 
   <%= label_tag :first_name %>
   <%= text_field_tag :first_name, @contact.first_name  %> <br>

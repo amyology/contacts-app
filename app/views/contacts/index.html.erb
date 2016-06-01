@@ -4,7 +4,7 @@
   <% @contacts.each do |contact| %> 
     <% if contact.user_id == current_user.id %>    
       <div class="box">
-        <b><u><a href="/list/<%= contact.id %>">Contact</a></u></b> <br>
+        <b><u><a href="/contacts/<%= contact.id %>">Contact</a></u></b> <br>
         First Name: <%= contact.first_name %> <br>
         Middle Name: <%= contact.middle %> <br>
         Last Name: <%= contact.last_name %> <br>

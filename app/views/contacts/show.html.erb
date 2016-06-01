@@ -9,5 +9,5 @@ Bio: <%= @contact.biography %> <br>
 User id: <%= @contact.user_id %><br>
 Updated at: <%= @contact.friendly_time %><br><br>
 
-<%= link_to "Edit Contact", "/list/#{@contact.id}/edit" %> <br>
-<%= link_to "Delete Contact", "/list/#{@contact.id}", method: :delete %>
+<%= link_to "Edit Contact", "/contacts/#{@contact.id}/edit" %> <br>
+<%= link_to "Delete Contact", "/contacts/#{@contact.id}", method: :delete %>

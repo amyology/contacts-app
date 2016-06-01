@@ -2,15 +2,15 @@ Rails.application.routes.draw do
   devise_for :users
 
   root to: 'contacts#index'
-  get '/list' => 'contacts#index'
+  get '/contacts' => 'contacts#index'
 
-  get '/list/new' => 'contacts#new'
-  post '/list' => 'contacts#create'
+  get '/contacts/new' => 'contacts#new'
+  post '/contacts' => 'contacts#create'
 
-  get '/list/:id' => 'contacts#show'
+  get '/contacts/:id' => 'contacts#show'
 
-  get '/list/:id/edit' => 'contacts#edit'
-  patch '/list/:id' => 'contacts#update'
+  get '/contacts/:id/edit' => 'contacts#edit'
+  patch '/contacts/:id' => 'contacts#update'
 
-  delete '/list/:id' => 'contacts#destroy'
+  delete '/contacts/:id' => 'contacts#destroy'
 end
